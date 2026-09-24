@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ManageMeals</title>
+  <link rel="stylesheet" href="mmeals.css" />
+</head>
+<body>
+  <div class="top-bar">
+    <div class="flex items-center">
+      <img src="/icons/mmeals48wh.png" alt="Icon" height="28px">
+      <h1>ManageMeals</h1>
+    </div>
+  </div>
+  <div class="content">
+    <div id="popup-content">
+      <div id="login-content">
+        <h2>Login</h2>
+        <div id="login-error" class="alert error hidden">
+          There was an error logging in, please check if email and password are correct.
+        </div>
+        <form id="login-form">
+          <div class="pb-10">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Email" required>
+          </div>
+          <div class="pb-10">
+            <label for="password">Password</label>
+            <input type="password" id="password" name="password" placeholder="Password" required>
+          </div>
+          <div class="pb-10">
+            <button type="submit" id="login-button">Login</button>
+          </div>
+        </form>
+        <p class="sm">Not registered? Please go to <a href="https://managemeals.com/">managemeals.com</a> to register.</p>
+      </div>
+      <div id="import-content" class="hidden">
+        <h2>Add Recipe</h2>
+        <form id="import-form">
+          <div class="pb-10">
+            <label for="url">URL</label>
+            <input type="text" id="url" name="url" placeholder="URL">
+          </div>
+          <div class="pb-10">
+            <label for="categories">Categories</label>
+            <p class="help-text">Optionally choose any categories to add the recipe to</p>
+            <div id="categories-list" class="flex flex-wrap gap-5 ct-options pt-10">
+            </div>
+          </div>
+          <div class="pb-10">
+            <label for="categories">Tags</label>
+            <p class="help-text">Optionally choose any tags to tag the recipe with</p>
+            <div id="tags-list" class="flex flex-wrap gap-5 ct-options pt-10">
+            </div>
+          </div>
+          <div id="import-status" class="alert hidden"></div>
+          <div class="pb-10 pt-5">
+            <button type="submit" id="add-button">Add</button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="error-content" class="hidden">
+      <p>Extension not supported on this page.</p>
+      <p>Please try another page.</p>
+    </div>
+  </div>
+  <script src="mmeals.js"></script>
+</body>
+</html>

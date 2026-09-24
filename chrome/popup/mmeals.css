@@ -156,10 +156,17 @@ p.sm {
   border: 1px solid #9ca3af;
   border-radius: 3px;
   margin: 10px 0;
+  font-size: 14px;
 }
 
 .alert.error {
   background-color: #ef4444;
   border-color: #dc2626;
+  color: #fff;
+}
+
+.alert.success {
+  background-color: #16a34a;
+  border-color: #15803d;
   color: #fff;
 }

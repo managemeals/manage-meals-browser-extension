@@ -8,7 +8,16 @@
     "48": "icons/mmeals48.png",
     "96": "icons/mmeals96.png"
   },
-  "permissions": ["activeTab", "webRequest", "https://api.managemeals.com/*", "cookies"],
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "extension@managemeals.com"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "cookies",
+    "https://api.managemeals.com/*"
+  ],
   "browser_action": {
     "default_icon": "icons/mmeals48.png",
     "default_title": "ManageMeals",
